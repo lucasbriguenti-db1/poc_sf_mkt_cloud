@@ -34,17 +34,17 @@ Future<void> showNotification(RemoteMessage message) async {
 Future<void> _setupSFMC() async {
   try {
     await SFMCSDK.setupSFMC(
-      accessToken: "u6rBxyZZ3qIGco2mGXRrq7E5",
-      appId: "fa2aefc7-f210-4112-8799-ba3f70467ee9",
-      mid: "100015405",
-      senderId: "662277545886",
-      sfmcURL: "https://mc0sj9cbr9nkvs0xr6s-clln7zxq.device.marketingcloudapis.com/",
+      accessToken: "",
+      appId: "",
+      mid: "",
+      senderId: "",
+      sfmcURL: "",
       delayRegistration: true,
     );
     print(await SFMCSDK.sdkState());
     await SFMCSDK.enablePush();
     print(await SFMCSDK.pushEnabled());
-    await SFMCSDK.setContactKey('teste-apresentacao@teste.com');
+    await SFMCSDK.setContactKey('teste@teste.com');
   } catch (e) {
     print((e as PlatformException).message);
     print(e.stacktrace);
